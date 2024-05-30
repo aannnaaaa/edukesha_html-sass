@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*стили для блока с инструкцией по проведению занятий*/
+.instruction {
+  margin-bottom: 80px;
+}
+.instruction h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 54px;
+}
+.instruction .instruction__card {
+  text-align: center;
+}
+.instruction .instruction__card img {
+  margin-bottom: 24px;
+}
+.instruction .instruction__card h3 {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 992px) {
+  .instruction .instruction__card h3 {
+    margin-bottom: 18px;
+  }
+}
+
+/*конец стилей для блока с инструкцией по проведению занятий*//*# sourceMappingURL=instruction.css.map */

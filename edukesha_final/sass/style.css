@@ -1,0 +1,764 @@
+@charset "UTF-8";
+/*сброс стилей*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*сброс стилей закончен*/
+/*настройка основных стилей*/
+:root {
+  --swiper-pagination-bottom: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  a {
+    font-size: 14px;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #322c49;
+}
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+@media screen and (max-width: 992px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+}
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 15px;
+  }
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 30px;
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  background: transparent;
+}
+@media screen and (max-width: 992px) {
+  .button {
+    font-size: 11px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .button {
+    width: 50%;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tutorial__button-group {
+    flex-wrap: wrap;
+  }
+}
+.button-primary {
+  background: #4047e2;
+  color: white;
+}
+
+.button-primary_outline {
+  border: 1px solid #4047e2;
+  color: #4047e2;
+}
+
+/*настройка основных стилей закончена*/
+/*стили для навигации*/
+.navigation {
+  margin-top: 48px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    margin-bottom: 50px;
+  }
+}
+.navigation .navigation-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .navigation .navigation-wrap .logo img {
+    height: 43px;
+  }
+}
+.navigation .navigation-wrap a {
+  color: #3f3a51;
+  margin: 0 51px;
+}
+.navigation .navigation-wrap .menu-btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navigation .navigation-wrap .menu-btn {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-right: 3px;
+    bottom: 18px;
+  }
+}
+.navigation .navigation-wrap .menu-btn span,
+.navigation .navigation-wrap .menu-btn span::before,
+.navigation .navigation-wrap .menu-btn span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  height: 2px;
+  width: 20px;
+  background-color: #4047e2;
+}
+.navigation .navigation-wrap .menu-btn span::before,
+.navigation .navigation-wrap .menu-btn span::after {
+  content: "";
+  display: block;
+  transition: 0.1s;
+}
+.navigation .navigation-wrap .menu-btn span::before {
+  transform: translateY(-5px);
+}
+.navigation .navigation-wrap .menu-btn span::after {
+  transform: translateY(5px);
+}
+.navigation .navigation-wrap .btn__active span {
+  height: 0px;
+  top: 100%;
+  margin-right: 16px;
+}
+.navigation .navigation-wrap .btn__active span::before {
+  transform: rotate(45deg);
+}
+.navigation .navigation-wrap .btn__active span::after {
+  transform: rotate(-45deg);
+}
+.navigation .navigation-wrap .menu__block__active {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: end;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(128, 128, 128, 0.288);
+  transition: 0.1s;
+}
+.navigation .navigation-wrap .links {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .navigation .navigation-wrap .links {
+    display: none;
+  }
+}
+.navigation .navigation-wrap .links__active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 0%;
+  padding-top: 80px;
+  height: 100%;
+  width: 70%;
+  background-color: #fff;
+  flex-direction: column;
+}
+.navigation .navigation-wrap .links__active a {
+  margin-right: 16px;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+@media screen and (max-width: 360px) {
+  .navigation .navigation-wrap .links__active a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .navigation .navigation-wrap .links__active a {
+    font-size: 16px;
+  }
+}
+.navigation .navigation-wrap .menu__block .menu-btn {
+  margin-top: 30px;
+}
+.navigation .navigation-wrap .menu__footer {
+  display: none;
+}
+.navigation .navigation-wrap .menu__footer__active {
+  position: relative;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #8f99ac;
+  margin-right: 12px;
+}
+.navigation .navigation-wrap .menu__footer__top {
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 480px) {
+  .navigation .navigation-wrap .menu__footer__top {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .navigation .navigation-wrap .menu__footer__top {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .navigation .navigation-wrap .menu__footer__top {
+    font-size: 10px;
+  }
+}
+.navigation .navigation-wrap .menu__footer__below {
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 480px) {
+  .navigation .navigation-wrap .menu__footer__below {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .navigation .navigation-wrap .menu__footer__below {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .navigation .navigation-wrap .menu__footer__below {
+    font-size: 10px;
+  }
+}
+
+/*конец стилей для навигации*/
+/*стили для первого блока*/
+.tutorial {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 500px) {
+  .tutorial {
+    margin-bottom: 40px;
+  }
+}
+.tutorial h1 {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 42px;
+  color: #322c49;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1200px) {
+  .tutorial h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tutorial h1 {
+    font-size: 26px;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tutorial h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial h1 {
+    font-size: 29px;
+  }
+}
+.tutorial .tutorial__text {
+  color: #8f99ac;
+  margin-bottom: 17px;
+}
+.tutorial .tutorial__button-group {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .tutorial .tutorial__button-group {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial .tutorial__button-group {
+    margin-bottom: 0;
+  }
+}
+.tutorial .safari-desktop {
+  width: 100%;
+  padding-left: 12px;
+}
+@media screen and (max-width: 992px) {
+  .tutorial .safari-desktop {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial .safari-desktop {
+    display: none;
+  }
+}
+.tutorial .safari-mobile {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .tutorial .safari-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*конец стилей для первого блока*/
+/*стили для второго блока*/
+.info {
+  margin-bottom: 80px;
+  background-color: #dfe1ff;
+}
+@media screen and (max-width: 500px) {
+  .info {
+    background-color: white;
+  }
+}
+.info .info__text {
+  margin-top: 73px;
+}
+@media screen and (max-width: 1200px) {
+  .info .info__text {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .info .info__text {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .info .info__text {
+    margin-top: 0;
+  }
+}
+.info .info__text .info__text__header {
+  margin-bottom: 28px;
+}
+.info .info__text .info__text__footer {
+  color: #3f3a51;
+  margin-bottom: 89px;
+}
+@media screen and (max-width: 1200px) {
+  .info .info__text .info__text__footer {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info .info__text .info__text__footer {
+    margin-bottom: 40px;
+  }
+}
+.info .teacher {
+  width: 100%;
+  box-shadow: 0 10px 50px 0 rgba(64, 71, 226, 0.2);
+}
+@media screen and (max-width: 992px) {
+  .info .teacher {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info .teacher {
+    height: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/*конец стилей для второго блока*/
+/*стили для третьего блока(про занятия)*/
+.lessons {
+  margin-bottom: 80px;
+}
+.lessons .lessons__text {
+  padding-left: 15px;
+}
+.lessons .lessons__text h2 {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 992px) {
+  .lessons .lessons__text h2 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lessons .lessons__text {
+    margin: 0 30px 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .lessons .lessons__text {
+    margin: 0 0 30px;
+    padding: 0;
+  }
+}
+.lessons img {
+  width: 100%;
+  box-shadow: 0 10px 50px 0 rgba(64, 71, 226, 0.2);
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .lessons img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .lessons img {
+    width: 100%;
+  }
+}
+
+/*конец стилей для третьего блока(про занятия)*/
+/*стили для блока с возможностями*/
+.opportunities {
+  margin-bottom: 67px;
+}
+.opportunities h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+.opportunities .opportunities__card {
+  height: 100%;
+  min-width: 0;
+  padding: 48px 30px 61px 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .opportunities .opportunities__card {
+    height: 320px;
+    padding: 50px 30px 50px 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .opportunities .opportunities__card {
+    width: 85%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .opportunities .opportunities__card {
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media screen and (min-width: 576px) {
+  .opportunities .opportunities__card {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+}
+.opportunities .opportunities__card img {
+  margin-bottom: 26px;
+}
+.opportunities .opportunities__card h3 {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+#card-1 {
+  background-color: #dfe1ff;
+  box-shadow: 0 10px 50px 0 rgba(64, 71, 226, 0.2);
+}
+
+#card-2 {
+  background-color: #ffe1ad;
+  box-shadow: 0 10px 50px 0 rgba(252, 162, 6, 0.2);
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+}
+@media screen and (max-width: 576px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.slider-card {
+  height: 320px;
+  min-width: 0;
+  padding: 48px 30px 61px 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 0 auto;
+}
+@media screen and (max-width: 440px) {
+  .slider-card {
+    max-width: 80%;
+  }
+}
+.slider-card img {
+  margin-bottom: 26px;
+}
+.slider-card h3 {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+/*конец стилей для блока с возможностями*/
+/*стили для блока с инструкцией по проведению занятий*/
+.instruction {
+  margin-bottom: 80px;
+}
+.instruction h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 54px;
+}
+.instruction .instruction__card {
+  text-align: center;
+}
+.instruction .instruction__card img {
+  margin-bottom: 24px;
+}
+.instruction .instruction__card h3 {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 992px) {
+  .instruction .instruction__card h3 {
+    margin-bottom: 18px;
+  }
+}
+
+/*конец стилей для блока с инструкцией по проведению занятий*/
+/*стили для блока про дистанционные уроки*/
+.online__classes {
+  margin-bottom: 65px;
+}
+.online__classes .online__classes__container {
+  background-color: #dfe1ff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.online__classes .online__classes__container .online__classes__container__text {
+  margin-top: 104px;
+  margin-bottom: 109px;
+}
+@media screen and (max-width: 992px) {
+  .online__classes .online__classes__container .online__classes__container__text {
+    margin-top: 70px;
+    margin-bottom: 75px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .online__classes .online__classes__container .online__classes__container__text {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+}
+.online__classes .online__classes__container .online__classes__container__text h2 {
+  margin-bottom: 14px;
+}
+.online__classes .online__classes__container .online__classes__container__text p {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .online__classes__container__text p {
+    color: #8f99ac;
+  }
+}
+.online__classes .online__classes__container img {
+  max-width: 100%;
+  margin-left: 40px;
+}
+@media screen and (max-width: 992px) {
+  .online__classes .online__classes__container img {
+    height: 175px;
+    margin: 0 0 30px 0;
+  }
+}
+.online__classes .online__classes__container .online__classes__container img {
+  border-radius: 35px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.online__classes .online__classes__container .desktop__teacher {
+  display: block;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .desktop__teacher {
+    display: none;
+  }
+}
+.online__classes .online__classes__container .mobile__teacher {
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .mobile__teacher {
+    display: block;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 25px 0 0 12px;
+  }
+  .online__classes .online__classes__container .mobile__teacher #top {
+    margin-bottom: 15px;
+  }
+  .online__classes .online__classes__container .mobile__teacher img {
+    height: 63px;
+    width: 65px;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan {
+    display: flex;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan img {
+    margin-right: 17px;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan #grey {
+    color: #8f99ac;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan .Ivan__text {
+    margin-top: 8px;
+  }
+}
+
+/*конец стилей для блока про дистанционные уроки*/
+/*стили для футера*/
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 43px;
+}
+@media screen and (max-width: 500px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__top #logo {
+    height: 50px;
+  }
+  .footer__top #fond {
+    margin-top: 25px;
+    width: 150px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 50px;
+}
+@media screen and (max-width: 992px) {
+  #logo {
+    height: 43px;
+  }
+}
+
+.footer__below {
+  margin-top: 38px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #8f99ac;
+}
+@media screen and (max-width: 576px) {
+  .footer__below {
+    text-align: center;
+    flex-direction: column;
+  }
+  .footer__below .footer__below__address {
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/*стили для блока про дистанционные уроки*/
+.online__classes {
+  margin-bottom: 65px;
+}
+.online__classes .online__classes__container {
+  background-color: #dfe1ff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.online__classes .online__classes__container .online__classes__container__text {
+  margin-top: 104px;
+  margin-bottom: 109px;
+}
+@media screen and (max-width: 992px) {
+  .online__classes .online__classes__container .online__classes__container__text {
+    margin-top: 70px;
+    margin-bottom: 75px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .online__classes .online__classes__container .online__classes__container__text {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+}
+.online__classes .online__classes__container .online__classes__container__text h2 {
+  margin-bottom: 14px;
+}
+.online__classes .online__classes__container .online__classes__container__text p {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .online__classes__container__text p {
+    color: #8f99ac;
+  }
+}
+.online__classes .online__classes__container img {
+  max-width: 100%;
+  margin-left: 40px;
+}
+@media screen and (max-width: 992px) {
+  .online__classes .online__classes__container img {
+    height: 175px;
+    margin: 0 0 30px 0;
+  }
+}
+.online__classes .online__classes__container .online__classes__container img {
+  border-radius: 35px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.online__classes .online__classes__container .desktop__teacher {
+  display: block;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .desktop__teacher {
+    display: none;
+  }
+}
+.online__classes .online__classes__container .mobile__teacher {
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .online__classes .online__classes__container .mobile__teacher {
+    display: block;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 25px 0 0 12px;
+  }
+  .online__classes .online__classes__container .mobile__teacher #top {
+    margin-bottom: 15px;
+  }
+  .online__classes .online__classes__container .mobile__teacher img {
+    height: 63px;
+    width: 65px;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan {
+    display: flex;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan img {
+    margin-right: 17px;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan #grey {
+    color: #8f99ac;
+  }
+  .online__classes .online__classes__container .mobile__teacher .Ivan .Ivan__text {
+    margin-top: 8px;
+  }
+}
+
+/*конец стилей для блока про дистанционные уроки*//*# sourceMappingURL=distance_lessons.css.map */

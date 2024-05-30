@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*стили для второго блока*/
+.info {
+  margin-bottom: 80px;
+  background-color: #dfe1ff;
+}
+@media screen and (max-width: 500px) {
+  .info {
+    background-color: white;
+  }
+}
+.info .info__text {
+  margin-top: 73px;
+}
+@media screen and (max-width: 1200px) {
+  .info .info__text {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .info .info__text {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .info .info__text {
+    margin-top: 0;
+  }
+}
+.info .info__text .info__text__header {
+  margin-bottom: 28px;
+}
+.info .info__text .info__text__footer {
+  color: #3f3a51;
+  margin-bottom: 89px;
+}
+@media screen and (max-width: 1200px) {
+  .info .info__text .info__text__footer {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info .info__text .info__text__footer {
+    margin-bottom: 40px;
+  }
+}
+.info .teacher {
+  width: 100%;
+  box-shadow: 0 10px 50px 0 rgba(64, 71, 226, 0.2);
+}
+@media screen and (max-width: 992px) {
+  .info .teacher {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info .teacher {
+    height: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/*конец стилей для второго блока*//*# sourceMappingURL=info.css.map */

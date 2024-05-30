@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*стили для первого блока*/
+.tutorial {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 500px) {
+  .tutorial {
+    margin-bottom: 40px;
+  }
+}
+.tutorial h1 {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 42px;
+  color: #322c49;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1200px) {
+  .tutorial h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tutorial h1 {
+    font-size: 26px;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tutorial h1 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial h1 {
+    font-size: 29px;
+  }
+}
+.tutorial .tutorial__text {
+  color: #8f99ac;
+  margin-bottom: 17px;
+}
+.tutorial .tutorial__button-group {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .tutorial .tutorial__button-group {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial .tutorial__button-group {
+    margin-bottom: 0;
+  }
+}
+.tutorial .safari-desktop {
+  width: 100%;
+  padding-left: 12px;
+}
+@media screen and (max-width: 992px) {
+  .tutorial .safari-desktop {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tutorial .safari-desktop {
+    display: none;
+  }
+}
+.tutorial .safari-mobile {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .tutorial .safari-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*конец стилей для первого блока*//*# sourceMappingURL=service-for-tutorials.css.map */
